@@ -8,7 +8,6 @@ if [ "$1" = "build" ]; then
     npm install --only=dev
     ./node_modules/.bin/webpack --config ./webpack.config.js --mode production
     echo "Done webpack build."
-    ls ./static/bundle
 else
     python app/manage.py migrate
     python app/manage.py collectstatic --noinput
